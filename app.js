@@ -53,7 +53,7 @@ if (!isProduction) {
   // proxy static asset requests to it
   app.all('/build/*', function (req, res) {
     proxy.web(req, res, {
-      target: 'http://localhost:8080'
+      target: 'http://localhost:8081'
     });
   });
 }
@@ -71,17 +71,10 @@ app.get('/', function(req, res){
   });
 });
 
-app.get('/main', function(req, res){
-  res.render('main', {
-    title: 'Black and White',
-    entry_js: 'main'
-  });
-});
-
-app.get('/components', function(req, res){
-  res.render('components', {
-    title: 'Components',
-    entry_js: 'components'
+app.get('/layouts', function(req, res){
+  res.render('layouts', {
+    title: 'layouts',
+    entry_js: 'layouts'
   });
 });
 
@@ -97,6 +90,6 @@ app.post('/post', function( req, res ){
   res.json({ result: true });
 })
 
-app.listen(3000, function(){
+app.listen(4000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });

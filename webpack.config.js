@@ -17,7 +17,7 @@ var config = require('./webpack.base.config.js');
 for( var key in config.entry ){
   var value_arr = config.entry[key];
   value_arr.unshift(
-    'webpack-dev-server/client?http://localhost:8080',
+    'webpack-dev-server/client?http://localhost:8081',
     'webpack/hot/only-dev-server'
   );
 }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="fixed-html" >
+  <head>
+    <title> <%= title %> </title>
+    <!-- For mobile responsive sites only -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- use minified assets if specified -->
+    <% var min = (process.env.NODE_ENV === 'production' || req.query.minified) ? '.min' : '' %>
+
+    <!-- Include minifed css in head in production -->
+    <% if( process.env.NODE_ENV === 'production' || req.query.minified ){ %>
+      <link rel="stylesheet" href="/build/common<%= min %>.css" >
+      <link rel="stylesheet" href="/build/<%= entry_js %><%= min %>.css" >
+    <% } %>
+  </head>
+  <body id="layout-1" class="fixed-body" >
+    <div class="fixed-navbar">
+      fixed-navbar
+    </div>
+    <div class="fixed-scroll-wrap">
+      fixed-scroll-wrap
+      <div class="content">
+        content
+        <% for( var i = 0; i < 10; i++ ){ %>
+          <div> Test Content Row </div>
+        <% } %>
+        <div  class="btn show-rows"
+              onclick="$('#more-rows').show(); $(this).hide()" >
+          show more rows
+        </div>
+        <div id="more-rows" style="display: none;" >
+          <div  class="btn"
+                onclick="$('#more-rows').hide(); $('.btn.show-rows').show()" >
+            hide more rows
+          </div>
+          <% for( var i = 0; i < 20; i++ ){ %>
+            <div> Test Content Row </div>
+          <% } %>
+        </div>
+      </div>
+      <div class="footer">
+        footer
+      </div>
+    </div>
+    <div class="fixed-footer">
+      fixed-footer
+    </div>
+    <!-- JS -->
+    <% if( process.env.NODE_ENV === 'production' || req.query.minified ){ %>
+      <script src="/build/common<%= min %>.js"></script>
+      <script src="/build/<%= entry_js %><%= min %>.js"></script>
+    <% } else { %>
+      <script src="/build/common.js"></script>
+      <script src="/build/<%= entry_js %>.js"></script>
+    <% } %>
+  </body>
+</html>

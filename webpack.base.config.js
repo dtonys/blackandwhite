@@ -24,8 +24,7 @@ var config = {
   },                                              // used when webpack loads assets async
   entry: {
     'index': ['./frontend/index.js'],
-    'main': ['./frontend/main.js'],
-    'components': ['./frontend/components.js'],
+    'layouts': ['./frontend/layouts.js'],
     'react_page': ['./frontend/react_page.js']
   },
   module: {
@@ -68,6 +67,6 @@ var config = {
   ]
 };
 
-config.addVendor( 'jquery', __dirname + '/node_modules/jquery/dist/jquery.min.js' );
+// config.addVendor( 'jquery', __dirname + '/node_modules/jquery/dist/jquery.min.js' );
 
 module.exports = config;

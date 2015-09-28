@@ -15,7 +15,7 @@ var runServer = function(){
     colors: true,
     quiet: false
   });
-  server.listen(8080);
+  server.listen(8081);
 }
 module.exports = runServer;
 
