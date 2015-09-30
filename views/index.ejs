@@ -22,12 +22,57 @@
         <div class="text1" > Simple, extensible UI framework </div>
       </div>
       <div class="layout-content" >
-        <% ['form', 'arrow', 'spinner', 'table'].forEach( function( item ){ %>
-          <%- include('./section', {
-            item: item,
-            drop_content: './'+item+'_content'
-          }) %>
-        <% })%>
+        <div class="margin-20"></div>
+        <div class="area" id="helpers">
+          <div class="area-title-wrap">
+            <a class="anchor-link" href="#helpers">
+              <div class="area-title">
+                Helpers
+                <span class="anchor-tip" > # </span>
+              </div>
+            </a>
+          </div>
+          <% ['width'].forEach( function( item ){ %>
+            <%- include('./section', {
+              item: item,
+              drop_content: './'+item+'_content'
+            }) %>
+          <% })%>
+        </div>
+        <div class="margin-20"></div>
+        <div class="area" id="components">
+          <div class="area-title-wrap">
+            <a class="anchor-link" href="#components">
+              <div class="area-title" >
+                Components
+                <span class="anchor-tip" > # </span>
+              </div>
+            </a>
+          </div>
+          <% ['form', 'arrow', 'spinner', 'table'].forEach( function( item ){ %>
+            <%- include('./section', {
+              item: item,
+              drop_content: './'+item+'_content'
+            }) %>
+          <% })%>
+        </div>
+        <div class="margin-20"></div>
+        <div class="area" id="layouts">
+          <div class="area-title-wrap">
+            <a class="anchor-link" href="#layouts">
+              <div class="area-title">
+                Layout
+                <span class="anchor-tip" > # </span>
+              </div>
+            </a>
+          </div>
+          <% ['fixed'].forEach( function( item ){ %>
+            <%- include('./section', {
+              item: item,
+              drop_content: './'+item+'_content'
+            }) %>
+          <% })%>
+        </div>
       </div>
     </div>
     <!-- JS -->
