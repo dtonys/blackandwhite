@@ -1,31 +1,28 @@
-Front End Boilerplate optimized for simplicity + fast development
+## Black and White
 
-opinionated CSS structure ( http://www.sitepoint.com/architecture-sass-project/  )
+Black and White is a simple, extensible UI framework.
 
-webpack + npm
+* Reusable, modular, and easily composable html building blocks.
+* Common sense default styles and helper classes.
+* 100% mobile friendly via responsive design
+* Desiged to be extended and built on top of
 
+### Goals
 
-#### Development
+* Build off of basic html without introducing additional markup.
+* Create complex UI modules using nothing but basic building blocks, illustrated via example.
+* Avoid abstract class names, meaningless wrapper classes, and default styling of tag names
+* No coupling with Javascript
 
-Start the server
+### Use Cases
 
-\> npm run start
+* Use as a starting point to get up and running, without writing "throwaway" code that doesn't scale.
+* Build your app structure first, worry about design later.
+* Alternative to larger, more opinionated frameworks that lock you in and limit possibilities.
+* Build your own opinionated CSS framework on top of this.
 
-Starts Express server @ port 3000 via nodemon
+### How to use
 
-Starts webpack-dev-server @ port 8080 with hot-reloading enabled
-
-Express server proxies static asset requests @ /build/*  to webpack-dev-server
-
-
-#### Production
-
-Build minified assets, saved @ /public/build
-
-\> npm run build:production
-
-Start the server in production mode
-
-\> npm run start:production
-
-
+* For basic users, "Plug and play" with a single minified css with out of the box components
+* For advanced users, download the stylesheets directory and build off a scalable CSS architecture
+* Extend the framework by following common sense strategies, illustrated by example.
