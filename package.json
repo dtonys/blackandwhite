@@ -13,6 +13,7 @@
     "errorhandler": "^1.4.2",
     "express": "^4.13.3",
     "fastclick": "^1.0.6",
+    "forever": "^0.15.1",
     "glob": "^5.0.14",
     "http-proxy": "^1.11.2",
     "jquery": "^2.1.4",
@@ -51,7 +52,7 @@
   },
   "scripts": {
     "build:production": "webpack --config webpack.production.config.js",
-    "start:production": "NODE_ENV=production nodemon --watch app.js app.js",
+    "start:production": "NODE_ENV=production forever start app.js",
     "watch": "webpack-dev-server --content-base --hot --progress --colors",
     "start": "NODE_ENV=development nodemon --watch app.js app.js"
   }
