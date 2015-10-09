@@ -24,8 +24,7 @@ var config = {
   },                                              // used when webpack loads assets async
   entry: {
     'index': ['./frontend/index.js'],
-    'layouts': ['./frontend/layouts.js'],
-    'react_page': ['./frontend/react_page.js']
+    'layouts': ['./frontend/layouts.js']
   },
   module: {
     noParse: [],

@@ -67,22 +67,15 @@ app.use( function( req, res, next ){
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'Index',
+    title: 'Black And White',
     entry_js: 'index'
   });
 });
 
 app.get('/layouts', function(req, res){
   res.render('layouts', {
-    title: 'layouts',
+    title: 'Black And White',
     entry_js: 'layouts'
-  });
-});
-
-app.get('/react_page', function(req, res){
-  res.render('react_page', {
-    title: 'React Component',
-    entry_js: 'react_page'
   });
 });
 
