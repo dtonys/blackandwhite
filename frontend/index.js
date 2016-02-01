@@ -1,12 +1,12 @@
 /*** CSS ***/
 // common
-require('base/reset.sass');
-require('base/default.sass');
-require('components/forms.sass');
-require('components/components.sass');
-require('layout/layout.sass');
+require('base/reset.scss');
+require('base/default.scss');
+require('components/forms.scss');
+require('components/components.scss');
+require('layout/layout.scss');
 // page specific
-require('pages/main.sass');
+require('pages/main.scss');
 
 /*** JS ***/
 // common

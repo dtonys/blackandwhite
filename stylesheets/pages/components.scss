@@ -1,0 +1,21 @@
+@import "../helpers/mixins";
+@import "../helpers/variables";
+
+#components {
+  .title {
+    font-size: 26px;
+  }
+}
+
+.anchor-link, a.anchor-link {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  text-align: left;
+  display: block;
+  border-bottom: solid black 5px;
+}
+
+.arrowed {
+  margin-bottom: 10px;
+}

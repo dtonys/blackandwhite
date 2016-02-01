@@ -1,0 +1,41 @@
+//
+#layout-1 {
+  .btn {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  .fixed-body {}
+
+  .fixed-navbar {
+    border: solid #FAA 3px;
+    background-color: white;
+    color: red;
+  }
+
+  .fixed-scroll-wrap {
+    border: solid #AAF 3px;
+    color: blue;
+    padding: 5px;
+    background-color: #EEE;
+  }
+
+  .fixed-footer {
+    color: red;
+    border: solid #FAA 3px;
+    background: white;
+  }
+
+  .content {
+    border: solid #555 3px;
+    color: #555;
+    background-color: #CCC;
+  }
+
+  .footer {
+    margin-top: 3px;
+    border: solid #555 3px;
+    color: #555;
+    background-color: #CCC;
+  }
+}

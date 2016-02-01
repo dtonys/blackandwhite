@@ -16,8 +16,8 @@ config.output.filename = '[name].min.js';
 config.module.loaders.push(
   // compile + process sass
   {
-    test: /\.sass$/,
-    loader: ExtractTextPlugin.extract('css!autoprefixer-loader?browsers=last 2 versions!sass?indentedSyntax')
+    test: /\.scss$/,
+    loader: ExtractTextPlugin.extract('css!autoprefixer-loader?browsers=last 2 versions!sass')
   }
 );
 config.plugins.push(

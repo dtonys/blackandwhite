@@ -26,11 +26,11 @@ config.output.filename = '[name].js';
 // compile sass, convert to style tags
 config.module.loaders.push(
   {
-    test: /\.sass$/,
+    test: /\.scss$/,
     loaders: [
       'style',
       'css',
-      'sass?indentedSyntax'
+      'sass'
     ]
   }
 );

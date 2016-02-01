@@ -1,7 +1,7 @@
-require('base/reset.sass');
-require('base/default.sass');
-require('components/forms.sass');
-require('layout/layout.sass');
-require('pages/layout.sass');
+require('base/reset.scss');
+require('base/default.scss');
+require('components/forms.scss');
+require('layout/layout.scss');
+require('pages/layout.scss');
 
 require("script!jquery");

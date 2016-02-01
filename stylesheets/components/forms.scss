@@ -1,0 +1,200 @@
+@import "../helpers/mixins";
+@import "../helpers/variables";
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 5px 20px;
+  font-size: $font-size;
+  outline: none;
+  user-select: none;
+  border: solid black 1px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px #999 inset;
+
+  @include placeholder {
+    color: black;
+    font-weight: 400;
+  }
+
+
+  &:focus {
+    box-shadow: 0px 0px 4px #000 inset;
+  }
+
+  &.error {
+    border: solid red 1px;
+    box-shadow: 0px 0px 4px red inset;
+
+    &:focus {
+      box-shadow: 0px 0px 4px red inset;
+    }
+  }
+}
+
+.btn {
+  height: 40px;
+  padding: 10px 10px 10px 10px;
+  background: white;
+  color: black;
+  border: 0;
+  border: solid black 1px;
+  border-radius: 5px;
+
+  @include vendor-prefix(touch-callout, none);
+
+  @include vendor-prefix(user-select, none);
+
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0px 0px 4px #999;
+
+  // transition: transform 0.1s
+  transition: background 0.1s;
+
+  &:hover {
+    box-shadow: 0px 0px 4px #000;
+  }
+
+  &:active {
+    background: #EEE;
+
+    // transform: scale(0.98)
+    transition: transform 0s;
+  }
+}
+
+.select {
+  height: 40px;
+  width: 100%;
+  padding: 8px 20px 10px 10px;
+  background: white;
+  color: black;
+  border: 0;
+  border: solid black 1px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px #999;
+  cursor: pointer;
+  font-size: $font-size;
+  outline: none;
+
+  @include vendor-prefix(touch-callout, none);
+
+  @include vendor-prefix(user-select, none);
+
+  @include vendor-prefix(appearance, none);
+
+  background-image: url("/img/arrow-down.png");
+  background-repeat: no-repeat;
+  background-position: 93% center;
+  background-size: 10px;
+}
+
+.textarea {
+  width: 100%;
+  outline: none;
+  border: solid black 1px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: $font-size;
+  resize: none;
+
+  @include vendor-prefix(appearance, none);
+
+  @include placeholder {
+    color: black;
+    font-weight: 400;
+  }
+
+
+  box-shadow: 0px 0px 4px #999 inset;
+
+  &:focus {
+    box-shadow: 0px 0px 4px #000 inset;
+  }
+}
+
+.checkbox {
+  display: none;
+}
+
+.radio {
+  display: none;
+}
+
+.checked-box, .unchecked-box, .checked-radio, .unchecked-radio {
+  vertical-align: top;
+  width: 20px;
+  height: 20px;
+  border: solid black 1px;
+}
+
+.unchecked-box, .unchecked-radio {
+  background: white;
+}
+
+.checked-box, .checked-radio {
+  background: black;
+}
+
+.unchecked-box, .checked-box {
+  border-radius: 2px;
+}
+
+.unchecked-radio, .checked-radio {
+  border-radius: 10px;
+}
+
+.label {
+  cursor: pointer;
+  padding: 10px;
+  line-height: 20px;
+}
+
+input.checkbox {
+  cursor: pointer;
+}
+
+input.checkbox + label {
+  .checked-box {
+    display: none;
+  }
+
+  .unchecked-box {
+    display: inline-block;
+  }
+}
+
+input.checkbox:checked + label {
+  .checked-box {
+    display: inline-block;
+  }
+
+  .unchecked-box {
+    display: none;
+  }
+}
+
+input.radio {
+  cursor: pointer;
+}
+
+input.radio + label {
+  .checked-radio {
+    display: none;
+  }
+
+  .unchecked-radio {
+    display: inline-block;
+  }
+}
+
+input.radio:checked + label {
+  .checked-radio {
+    display: inline-block;
+  }
+
+  .unchecked-radio {
+    display: none;
+  }
+}
