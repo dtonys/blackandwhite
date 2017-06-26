@@ -3,6 +3,8 @@
  */
 var path = require('path');
 var webpack = require('webpack');
+var argv = require('minimist')(process.argv.slice(2));
+
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
 // full paths
@@ -24,7 +26,8 @@ var config = {
   },                                              // used when webpack loads assets async
   entry: {
     'index': ['./frontend/index.js'],
-    'layouts': ['./frontend/layouts.js']
+    'layouts': ['./frontend/layouts.js'],
+    'blackandwhite': ['./frontend/blackandwhite.js']  // Generate the public minified css
   },
   module: {
     noParse: [],
@@ -61,9 +64,9 @@ var config = {
       "node_modules"
     ]
   },
-  plugins: [
-    new CommonsChunkPlugin({ name: "common" })
-  ]
+  plugins: argv['skip-commons-chunk-plugin']
+     ? []
+     : [ new CommonsChunkPlugin({ name: "common" }) ]
 };
 
 // config.addVendor( 'jquery', __dirname + '/node_modules/jquery/dist/jquery.min.js' );

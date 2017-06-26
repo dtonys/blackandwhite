@@ -4,5 +4,6 @@ public/css/*
 !public/css/.gitkeep
 public/build/*
 !public/build/.gitkeep
+!public/build/.blackandwhite.min.css
 npm-debug.log
 port.txt
