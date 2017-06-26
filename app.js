@@ -84,10 +84,6 @@ app.post('/post', function( req, res ){
   res.json({ result: true });
 })
 
-// use alternate port if specified
-var port = 4000;
-try{ port = fs.readFileSync('./port.txt', "utf8" ); } catch(e){ console.log(e) };
-
-app.listen(port, function(){
+app.listen(8004, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
