@@ -1,5 +1,5 @@
 {
-  "name": "web_boilerplate",
+  "name": "blackandwhite",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
@@ -23,6 +23,7 @@
     "minimist": "^1.2.0",
     "morgan": "^1.6.1",
     "multer": "^1.0.3",
+    "npm-run-all": "^4.0.2",
     "page": "^1.6.3",
     "react": "^0.13.3",
     "serve-favicon": "^2.3.0",
@@ -53,10 +54,15 @@
     "webpack-merge": "^0.2.0"
   },
   "scripts": {
-    "build:production": "cross-env NODE_ENV=production webpack --config webpack.production.config.js",
-    "start:production": "cross-env NODE_ENV=production forever start app.js",
-    "watch": "webpack-dev-server --content-base --hot --progress --colors",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.production.config.js",
+    "start": "cross-env NODE_ENV=production forever start app.js",
     "dev": "nodemon --watch app.js app.js",
-    "build-public-css": "cross-env NODE_ENV=production webpack --config webpack.production.config.js --skip-commons-chunk-plugin"
+    "build-public-css": "cross-env NODE_ENV=production npm-run-all build-skip-common copy-to-public",
+    "build-skip-common": "webpack --config webpack.production.config.js --skip-commons-chunk-plugin",
+    "copy-to-public": "cp ./public/build/blackandwhite.min.css ./public/blackandwhite.min.css",
+    "deploy": "cross-env NODE_ENV=production pull-latest install-packages build restart-server",
+    "pull-latest": "git pull origin master",
+    "install-packages": "npm i --production",
+    "restart-server": "forever restart app.js"
   }
 }

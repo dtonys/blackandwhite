@@ -1,9 +1,7 @@
 node_modules/
 .sass-cache/
-public/css/*
-!public/css/.gitkeep
-public/build/*
-!public/build/.gitkeep
-!public/build/blackandwhite.min.css
+public/css/
+# !public/css/.gitkeep
+public/build/
+# !public/build/.gitkeep
 npm-debug.log
-port.txt
