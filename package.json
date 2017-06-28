@@ -59,6 +59,6 @@
     "dev": "nodemon --watch app.js app.js",
     "build-public-css": "cross-env NODE_ENV=production npm-run-all build-skip-common copy-to-public",
     "build-skip-common": "webpack --config webpack.production.config.js --skip-commons-chunk-plugin",
-    "copy-to-public": "cp ./public/build/blackandwhite.min.css ./public/blackandwhite.min.css",
+    "copy-to-public": "cp ./public/build/blackandwhite.min.css ./public/blackandwhite.min.css"
   }
 }
