@@ -92,7 +92,7 @@ The underscore ejs templates are accessible to both client and server.
 
 `/stylesheets`
 
-SASS directory structure is setup based on this setup:
+SASS directory structure based on this setup:
 
 https://www.sitepoint.com/architecture-sass-project/
 
