@@ -111,18 +111,10 @@ npm run dev         # Start web server and watch assets
 
 ## In production
 
-**TODO(@dtonys): Pull and deploy code from master branch HEAD**
-
-`npm run deploy`
-
-
-**Production deploy details:**
-
 ```
-**TODO(@dtonys):** Set `NODE_ENV=production` before step one
 npm i                     # install packages
-npm run build:production  # build assets
-npm run start:production  # Start server in production mode
+npm run build             # build assets
+npm run start             # Start web server in production mode
 ```
 
 

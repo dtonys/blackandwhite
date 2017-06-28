@@ -60,9 +60,5 @@
     "build-public-css": "cross-env NODE_ENV=production npm-run-all build-skip-common copy-to-public",
     "build-skip-common": "webpack --config webpack.production.config.js --skip-commons-chunk-plugin",
     "copy-to-public": "cp ./public/build/blackandwhite.min.css ./public/blackandwhite.min.css",
-    "deploy": "cross-env NODE_ENV=production npm-run-all pull-latest install-packages build restart-server",
-    "pull-latest": "git pull origin master",
-    "install-packages": "npm i",
-    "restart-server": "forever restart blackandwhite"
   }
 }
